@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+ mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27018:27017
+    volumes:
+      - type: bind
+        source: ~/db/MisterTEA2/data
+        target: /data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: myUser
+      MONGO_INITDB_ROOT_PASSWORD: myPassword

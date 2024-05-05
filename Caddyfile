@@ -1,0 +1,12 @@
+mrtea.weebweep.xyz {
+	reverse_proxy :4173
+	encode zstd gzip
+}
+
+api.mrtea.weebweep.xyz {
+	reverse_proxy :3000
+}
+
+db.weebweep.xyz {
+	reverse_proxy :27017
+}
